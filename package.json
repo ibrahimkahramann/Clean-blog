@@ -1,0 +1,26 @@
+{
+  "name": "clean-blog",
+  "version": "1.0.0",
+  "description": "clean-blog app",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ibrahimkahramann/Clean-blog.git"
+  },
+  "keywords": [
+    "clean",
+    "blog",
+    "app"
+  ],
+  "author": "ibrahim kahraman",
+  "bugs": {
+    "url": "https://github.com/ibrahimkahramann/Clean-blog/issues"
+  },
+  "homepage": "https://github.com/ibrahimkahramann/Clean-blog#readme",
+  "devDependencies": {
+    "prettier": "3.0.0"
+  }
+}
