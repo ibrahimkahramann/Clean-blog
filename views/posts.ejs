@@ -1,0 +1,53 @@
+<%- include('partials/_header') -%>
+
+<body>
+
+  <%- include('partials/_navigation') -%>
+
+  <!-- Page Header -->
+  <header class="masthead" style="background-image: url('img/post-bg.jpg')">
+    <div class="overlay"></div>
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 col-md-10 mx-auto">
+          <div class="post-heading ">
+            <h1 class="text-center"><%= post.title %></h1>
+          </div>
+          <span class="meta float-right" style="color: rgb(195, 193, 193);">
+            Posted <%= post.dateCreated.toLocaleDateString(); %>
+          </span>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Post Content -->
+  <article>
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 col-md-10 mx-auto">
+          <p>      
+            <%= post.description %>
+          </p>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-12 d-flex justify-content-end">
+          <div class="text-center">
+            <a href="/posts/edit/<%= post._id %>" class="btn btn-outline-secondary btn-sm" style="border-radius: 5px; padding: 3px !important; font-size: 13px;"><span>Update</span></a>	
+          </div>	
+          <div class="text-center ml-1">
+            <a href="/posts/<%= post._id %>?_method=DELETE" onclick="return confirm('Are you sure?')" class="btn btn-outline-danger btn-sm" style="border-radius: 5px; padding: 3px !important; font-size: 13px;"><span>Delete</span></a>	
+          </div>								
+        </div>
+      </div>
+    </div>
+  </article>
+
+  <hr>
+
+  <%- include('partials/_footer') -%>
+
+</body>
+
+</html>
